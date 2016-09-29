@@ -4,22 +4,27 @@ var main = function(){
 	$(document).ready(function(){
 
 
-	console.log('App Started');
+	console.log('Main.js Started');
+	$("#userLoggued").text("");
 
 
 
 		$("#login").on('click', function() {
 	//Aca va todo el proceso de loguear el user en el storage con sus parametros
 			console.log("Deberia chequear si existe le usuario y enviarme al query.html");
+
+			$("#errorDisplay").text("");
+
+
 			var user = $("#user").val();
 			var pass = $("#pass").val();
 			var userCheck = {};
 			var userValidator = false;
 
-			if(localStorage.length > 0){
+			if(localStorage.length > 0) {
 				for(i = 1; i <= localStorage.length; i++){
 					userCheck = JSON.parse(localStorage.getItem(i));
-					if (user == userCheck.user && pass == userCheck.pass){
+					if ((user == userCheck.user && pass == userCheck.pass) && user != ""){
 						userValidator = true;
 						sessionStorage.setItem('user', user);
 
@@ -29,7 +34,7 @@ var main = function(){
 					}
 				};
 				if(!userValidator){
-					alert("User & Password don't match");
+					$("#errorDisplay").text("User & Password don't match");
 				};
 			};
 

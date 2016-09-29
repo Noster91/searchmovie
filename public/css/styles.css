@@ -97,3 +97,36 @@ body {
   background-color: #8D1BA2 !important;
   border-color: #8D1BA2 !important;
 }
+
+/* line 42, ../sass/_main.scss */
+.error {
+  color: red;
+  font-size: 10px;
+}
+
+/* Saludo con usuario logueado*/
+/* line 51, ../sass/_main.scss */
+.userwelcome {
+  position: absolute;
+  right: 50px;
+}
+
+/*Boxes por pelicula*/
+/* line 57, ../sass/_main.scss */
+.moviebox {
+  height: 250px;
+  background-color: rgba(188, 36, 217, 0.32);
+  border-color: 1px solid black;
+  box-shadow: 1px 1px grey;
+  text-align: center;
+  border-radius: 5%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* line 72, ../sass/_main.scss */
+.title {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}

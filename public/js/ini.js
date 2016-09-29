@@ -2,7 +2,6 @@
     var Router = {};
     Router.evalRoute = function() {
         var pathName = $(location).attr("pathname");
-        console.log("pathname = " + pathName);
 
 	   if (sessionStorage.getItem("user") != null ) {
 
@@ -21,7 +20,7 @@ app = function(router) {
     var myApp = {};
     myApp.init = function() {
         $(document).ready(function() {
-            console.log("-----Se inicio  la app-----------");
+            console.log("App Inicializada");
             router.evalRoute();
 
         });
