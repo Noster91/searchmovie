@@ -6,6 +6,7 @@ var edition = function() {
 
 	var user = sessionStorage.getItem('user');
 	var userToEdit = {};
+	
 	for(i = 1; i <= localStorage.length; i++){
 		userCheck = JSON.parse(localStorage.getItem(i));
 		if (user == userCheck.user){
@@ -22,7 +23,7 @@ var edition = function() {
 
 		};
 
-		$("#edituser	").on("click", function() {
+		$("#edituser").on("click", function() {
 				$("#errorDisplay").text("");
 
 				userToEdit.user = $("#user").val();
@@ -57,6 +58,10 @@ var edition = function() {
 
 		});
 	};
+
+	$("#deleteuser").on("click", function() {
+		app.loadTemplate("app", "deleteUser", deleteUser);
+	});
 
 
 };
