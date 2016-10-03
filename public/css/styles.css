@@ -114,7 +114,8 @@ body {
 /*Boxes por pelicula*/
 /* line 57, ../sass/_main.scss */
 .moviebox {
-  height: 250px;
+  overflow: hidden;
+  height: 350px;
   background-color: rgba(188, 36, 217, 0.32);
   border-color: 1px solid black;
   box-shadow: 1px 1px grey;
@@ -124,7 +125,7 @@ body {
   margin: 10px 0;
 }
 
-/* line 72, ../sass/_main.scss */
+/* line 73, ../sass/_main.scss */
 .title {
   color: black;
   font-size: 16px;

@@ -55,7 +55,8 @@ body {
 
 /*Boxes por pelicula*/
 .moviebox {
-	height: 250px;
+ 	overflow: hidden;
+	height: 350px;
 	background-color: rgba(#bc24d9, 0.32);
 	border-color: 1px solid black;
 	box-shadow: 1px 1px grey;
